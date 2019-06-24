@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.shop.api.SellerService;
 import org.shop.data.Seller;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * The Seller Initializer util class.
@@ -14,10 +15,15 @@ import org.shop.data.Seller;
 public class SellerInitializer {
 
     /** The seller service. */
+    @Autowired
     private SellerService sellerService;
     
     /** The seller names. */
-    private Map<Long, String> sellerNames = Collections.emptyMap();
+    private Map<Long, String> sellerNames;
+
+    public SellerInitializer(Map<Long, String> sellerNames) {
+        this.sellerNames = sellerNames;
+    }
 
     /**
      * Inits the sellers.
