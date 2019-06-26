@@ -1,7 +1,5 @@
 package org.shop.api.impl;
 
-import java.util.List;
-
 import org.shop.api.ProductService;
 import org.shop.api.ProposalService;
 import org.shop.api.SellerService;
@@ -11,9 +9,9 @@ import org.shop.data.Seller;
 import org.shop.data.State;
 import org.shop.repository.ProposalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
+import java.util.List;
+
 public class ProposalServiceImpl implements ProposalService {
 
     private final ProposalRepository repository;

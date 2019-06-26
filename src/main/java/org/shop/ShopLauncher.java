@@ -21,12 +21,13 @@ public class ShopLauncher {
     public static void main(String[] args) {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
         logger.info(ctx.getBean(CustomBean.class));
+        displayAllBeans(ctx);
     }
 
-    public static void displayAllBeans(ApplicationContext applicationContext) {
+    private static void displayAllBeans(ApplicationContext applicationContext) {
         String[] allBeanNames = applicationContext.getBeanDefinitionNames();
         for (String beanName : allBeanNames) {
-            System.out.println(beanName);
+            logger.info(beanName);
         }
     }
 }

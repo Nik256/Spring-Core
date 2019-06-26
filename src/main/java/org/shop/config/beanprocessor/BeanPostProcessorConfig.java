@@ -1,7 +1,7 @@
 package org.shop.config.beanprocessor;
 
 import org.shop.annotation.CustomBean;
-import org.shop.annotation.CustomBeanPostProcessor;
+import org.shop.annotation.InjectRandomIntAnnotationBeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Configuration;
 public class BeanPostProcessorConfig {
 
     @Bean
-    public CustomBeanPostProcessor customBeanPostProcessor() {
-        return new CustomBeanPostProcessor();
+    public InjectRandomIntAnnotationBeanPostProcessor customBeanPostProcessor() {
+        return new InjectRandomIntAnnotationBeanPostProcessor();
     }
 
-    @Bean
+    @Bean(initMethod = "init")
     public CustomBean customBean() {
         return new CustomBean();
     }
