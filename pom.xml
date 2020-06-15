@@ -7,7 +7,7 @@
 
     <properties>
         <org.springframework.version>5.1.8.RELEASE</org.springframework.version>
-        <commons.collections.version>2.1.1</commons.collections.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
         <commons.beanutils.version>1.8.0</commons.beanutils.version>
         <org.aspectj.version>1.9.2</org.aspectj.version>
         <org.apache.logging.log4j.version>2.11.2</org.apache.logging.log4j.version>
